@@ -10,19 +10,23 @@
           <a class="nav-link" href="NavBar.vue">Criar post</a>
         </li>
       </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="NavBar.vue">Logout</a>
-        </li>
-      </ul>
+      <login-getter></login-getter>
     </nav>
     <a class="btn btn-primary">teste botão</a>
   </div>
 </template>
 
 <script>
+import LoginGetter from './LoginGetter.vue';
+
 export default {
   name: 'NavBar',
+  components: { LoginGetter },
+  data() {
+    return {
+      loggedIn: false,
+    };
+  },
 };
 </script>
 

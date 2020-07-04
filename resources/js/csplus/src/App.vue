@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
+      <p v-if="loggedIn"> Login efetuado.{{loggedIn}}</p>
+      <p v-else>Login não efetuado.</p>
   </div>
 </template>
 
@@ -11,6 +13,11 @@ export default {
   name: 'App',
   components: {
     NavBar,
+  },
+  data() {
+    return {
+      loggedIn: true,
+    };
   },
 };
 </script>
