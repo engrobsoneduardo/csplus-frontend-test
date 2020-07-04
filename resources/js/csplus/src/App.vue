@@ -1,8 +1,6 @@
 <template>
-  <div id="app">
+  <div id='app'>
     <NavBar></NavBar>
-      <p v-if="loggedIn"> Login efetuado.{{loggedIn}}</p>
-      <p v-else>Login não efetuado.</p>
   </div>
 </template>
 
@@ -18,6 +16,11 @@ export default {
     return {
       loggedIn: true,
     };
+  },
+  methods: {
+    logout() {
+      this.loggedIn = false;
+    },
   },
 };
 </script>
